@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import MovieCard from "../components/MovieCard";
 
 const moviesUrl = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -26,7 +27,7 @@ const Home = () => {
         {topMovies.length === 0 && <p>Carregando...</p> }
         {topMovies.length > 0 && topMovies.map((movie) => (
           // eslint-disable-next-line react/jsx-key
-          <p>{movie.title}</p>
+          <MovieCard key={movie.id} movie={movie} />
         ))}
       </div>
     </div>
