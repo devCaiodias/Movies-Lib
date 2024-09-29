@@ -26,7 +26,6 @@ const Home = () => {
       <div className="movies-container">
         {topMovies.length === 0 && <p>Carregando...</p> }
         {topMovies.length > 0 && topMovies.map((movie) => (
-          // eslint-disable-next-line react/jsx-key
           <MovieCard key={movie.id} movie={movie} />
         ))}
       </div>
