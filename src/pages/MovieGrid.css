@@ -7,6 +7,7 @@
 
 .title .query-text {
     color: rgb(255, 208, 0);
+    text-transform: uppercase;
 }
 
 .movies-container {
@@ -59,4 +60,42 @@
 .movies-container div a:hover {
     background-color: transparent;
     color: white;
+}
+
+@media (min-width: 320px) and (max-width: 480px) { 
+    .movies-container { 
+        display: block;
+        margin: 0 auto;
+    }
+
+    .movies-container div { 
+        width: 100%;
+    }
+
+    .container .title {
+        color: white;
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 2rem 0 2rem;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 667px) {
+    .movies-container {
+            display: block;
+            margin: 0 auto;
+        }
+    
+        .movies-container div {
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+    
+        .container .title {
+            color: white;
+            font-size: 1.8rem;
+            text-align: center;
+            margin: 2rem 0 0.1rem;
+        }
 }
